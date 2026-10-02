@@ -364,7 +364,7 @@ export default function Projects() {
                 img={NovaNotes}
                 title="Nova Notes"
                 summary="A high-performance, fully offline-capable mobile application dedicated to local task management and daily note organization. Features client-side state management with Redux Toolkit, preventing unneeded UI rerenders with predictable data flow. Custom lightweight UI components that operate independently of network connection. Published on Google Play Store."
-                github="https://github.com/zain100000/NovaNotes"
+                github="https://github.com/zain-the-loser10000/NovaNotes"
                 link="https://play.google.com/store/apps/details?id=com.novanotes"
                 date="2026"
                 tech={[
@@ -397,7 +397,7 @@ export default function Projects() {
                 img={WhiteBear}
                 title="White Bear"
                 description="A minimalist all-in-one personal dashboard designed for daily lifestyle optimization. Features an integrated system combining short/long-term goal management, persistent habit streak tracking, secure markdown-based reflection journals, dynamic todo checklists, and an ai automated analytics suite for visualizing execution trends."
-                github="https://github.com/zain100000/WhiteBear"
+                github="https://github.com/zain-the-loser10000/WhiteBear"
                 link="https://play.google.com/store/apps/details?id=com.whitebears"
                 date="2026"
                 tech={[
@@ -420,7 +420,7 @@ export default function Projects() {
                 img={CoffeeSpot}
                 title="Coffee Spot"
                 description="A comprehensive full-stack mobile and web-based platform helping users discover new coffees, place orders, and access customer care. Features a React Native CLI mobile app for Android users, a Node.js + Express REST API handling all business logic, and a React.js super admin panel for managing shops, users, and orders. All codebases are modular, scalable, and follow best practices in architecture and design. Includes JWT authentication, role-based access control, MongoDB integration, and static payment flow."
-                github="https://github.com/zain100000/CoffeeSpot"
+                github="https://github.com/zain-the-loser10000/CoffeeSpot"
                 // link="https://coffee-spot-demo.com"
                 date="2026"
                 tech={[
