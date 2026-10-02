@@ -10,17 +10,18 @@ import {
   FaExternalLinkAlt,
   FaCalendarAlt,
   FaTag,
+  FaRocket,
+  FaCode,
+  FaHourglassHalf,
 } from "react-icons/fa";
 
 // Import your project images
 import NovaNotes from "../../public/projects/proj1.jpg";
 import WhiteBear from "../../public/projects/proj2.jpg";
-import CoffeeSpot from "../../public/projects/proj3.jpg";
 
 // Import anime character images
 import Sakamoto from "../../public/images/sakamoto.jpg";
 import Johan from "../../public/images/johan.jpg";
-import Ayonokoji from "../../public/images/ayonokoji.jpg";
 
 const FramerImage = motion(Image);
 
@@ -317,6 +318,201 @@ const Project = ({
 };
 
 // ==============================
+// COMING SOON CARD
+// ==============================
+const ComingSoonCard = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
+
+  return (
+    <motion.article
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, type: "spring", stiffness: 80, delay: 0.2 }}
+      className="relative flex w-full flex-col items-center justify-center rounded-xl sm:rounded-2xl rounded-br-2xl 
+        border border-dashed border-purple-500/40 bg-gradient-to-br from-neutral-900/95 via-neutral-950/95 to-black/95 
+        p-4 sm:p-6 shadow-2xl backdrop-blur-xl transition-all duration-500 
+        group hover:-translate-y-1 sm:hover:-translate-y-2 hover:border-purple-500/70 hover:shadow-purple-500/20 
+        overflow-hidden min-h-[400px] sm:min-h-[450px]"
+    >
+      {/* Animated gradient background */}
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-br from-purple-600/10 via-pink-500/5 to-blue-600/10"
+        animate={{
+          backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+        style={{ backgroundSize: "200% 200%" }}
+      />
+
+      {/* Floating particles */}
+      {[...Array(6)].map((_, i) => (
+        <motion.div
+          key={i}
+          className="absolute w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-purple-400/60"
+          style={{
+            left: `${15 + i * 15}%`,
+            top: `${20 + (i % 3) * 25}%`,
+          }}
+          animate={{
+            y: [-10, 10, -10],
+            opacity: [0.2, 0.8, 0.2],
+            scale: [1, 1.5, 1],
+          }}
+          transition={{
+            duration: 3 + i * 0.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: i * 0.3,
+          }}
+        />
+      ))}
+
+      {/* Rotating ring */}
+      <motion.div
+        className="absolute top-8 right-8 w-24 h-24 sm:w-32 sm:h-32 rounded-full border border-purple-500/20"
+        animate={{ rotate: 360 }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+      >
+        <motion.div
+          className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-purple-400"
+          animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        />
+      </motion.div>
+
+      {/* Second rotating ring */}
+      <motion.div
+        className="absolute bottom-12 left-8 w-16 h-16 sm:w-20 sm:h-20 rounded-full border border-pink-500/20"
+        animate={{ rotate: -360 }}
+        transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+      >
+        <motion.div
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-pink-400"
+          animate={{ scale: [1, 1.8, 1], opacity: [0.4, 1, 0.4] }}
+          transition={{ duration: 2.5, repeat: Infinity }}
+        />
+      </motion.div>
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center text-center px-4">
+        {/* Animated Icon Container */}
+        <motion.div
+          className="relative mb-6"
+          animate={{ y: [-5, 5, -5] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        >
+          {/* Glowing circle behind icon */}
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/40 to-pink-500/40 rounded-full blur-2xl scale-150 animate-pulse" />
+
+          <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/30 flex items-center justify-center backdrop-blur-sm">
+            <motion.div
+              animate={{ rotate: [0, 10, -10, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <FaRocket className="w-8 h-8 sm:w-10 sm:h-10 text-purple-400" />
+            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Title */}
+        <motion.h2
+          className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3"
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ delay: 0.4 }}
+        >
+          More Projects
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+            Coming Soon
+          </span>
+        </motion.h2>
+
+        {/* Description */}
+        <motion.p
+          className="text-neutral-400 text-xs sm:text-sm md:text-base max-w-xs leading-relaxed mb-6"
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ delay: 0.5 }}
+        >
+          Exciting new projects are in the works. Building something legendary —
+          stay tuned!
+        </motion.p>
+
+        {/* Animated dots */}
+        <div className="flex items-center gap-2 mb-6">
+          {[0, 1, 2].map((i) => (
+            <motion.div
+              key={i}
+              className="w-2 h-2 rounded-full bg-purple-400"
+              animate={{
+                scale: [1, 1.5, 1],
+                opacity: [0.3, 1, 0.3],
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                delay: i * 0.3,
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Status badges */}
+        <div className="flex flex-wrap items-center justify-center gap-2">
+          <motion.span
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-purple-500/10 border border-purple-500/30 rounded-full text-[10px] sm:text-xs text-purple-400"
+            animate={{ opacity: [0.7, 1, 0.7] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            <FaCode className="w-3 h-3" />
+            In Development
+          </motion.span>
+          <motion.span
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-neutral-800/50 border border-neutral-700 rounded-full text-[10px] sm:text-xs text-neutral-400"
+            animate={{ opacity: [0.7, 1, 0.7] }}
+            transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+          >
+            <FaHourglassHalf className="w-3 h-3" />
+            Stay Tuned
+          </motion.span>
+        </div>
+
+        {/* Progress bar */}
+        <div className="w-full max-w-[200px] mt-6">
+          <div className="flex justify-between text-[10px] text-neutral-500 mb-1.5">
+            <span>Progress</span>
+            <motion.span
+              animate={{ opacity: [0.5, 1, 0.5] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              Building...
+            </motion.span>
+          </div>
+          <div className="h-1.5 bg-neutral-800 rounded-full overflow-hidden">
+            <motion.div
+              className="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"
+              initial={{ width: "0%" }}
+              animate={{ width: ["0%", "70%", "30%", "85%", "45%", "90%"] }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+          </div>
+        </div>
+      </div>
+    </motion.article>
+  );
+};
+
+// ==============================
 // MAIN PROJECTS PAGE
 // ==============================
 export default function Projects() {
@@ -413,29 +609,8 @@ export default function Projects() {
                 characterColor="blue"
               />
 
-              {/* Coffee Spot - econd Project */}
-              <Project
-                type="Full-Stack Coffee Platform"
-                icon="☕"
-                img={CoffeeSpot}
-                title="Coffee Spot"
-                description="A comprehensive full-stack mobile and web-based platform helping users discover new coffees, place orders, and access customer care. Features a React Native CLI mobile app for Android users, a Node.js + Express REST API handling all business logic, and a React.js super admin panel for managing shops, users, and orders. All codebases are modular, scalable, and follow best practices in architecture and design. Includes JWT authentication, role-based access control, MongoDB integration, and static payment flow."
-                github="https://github.com/zain-the-loser10000/CoffeeSpot"
-                // link="https://coffee-spot-demo.com"
-                date="2026"
-                tech={[
-                  "React Native CLI",
-                  "Redux",
-                  "Node.js",
-                  "Express.js",
-                  "MongoDB",
-                  "React.js",
-                  "JWT",
-                  "REST APIs",
-                ]}
-                character={Ayonokoji}
-                characterColor="blue"
-              />
+              {/* Coming Soon Card */}
+              <ComingSoonCard />
             </div>
 
             {/* Bottom CTA */}
