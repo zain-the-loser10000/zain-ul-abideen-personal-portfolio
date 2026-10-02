@@ -145,7 +145,7 @@ const Navbar = () => {
         <motion.a
           target="_blank"
           className="w-6 h-6 text-textMuted hover:text-primary transition-colors duration-300"
-          href="https://www.instagram.com/zain_the_loser10000/"
+          href="https://www.instagram.com/zain_the_loser100000/"
           whileHover={{ y: -2, scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           aria-label="Instagram"
