@@ -216,7 +216,7 @@ const Experience = () => {
             company="Kreative Nomads"
             time="Sep 2024 - Feb 2025"
             address="Lahore, Pakistan | Remote"
-            work="Built 15+ reusable cross-platform UI components, reducing new-screen development time by about 20%. Converted complex UI/UX wireframes into responsive React Native interfaces for iOS and Android. Integrated RESTful APIs with backend services and improved application data-loading flows. Organized application state with Redux to keep data flow predictable across remote development sprints."
+            work="Built 10+ reusable cross-platform UI components, reducing new-screen development time by about 20%. Converted complex UI/UX wireframes into responsive React Native interfaces for iOS and Android. Integrated RESTful APIs with backend services and improved application data-loading flows. Organized application state with Redux to keep data flow predictable across remote development sprints."
             character={Vegeta}
             characterName="Vegeta"
             color="blue"
