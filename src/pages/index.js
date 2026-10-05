@@ -15,7 +15,10 @@ export default function Home() {
           property="og:image"
           content="https://zain-ul-abideen-personal-portfolio.vercel.app/background.jpg?v=1"
         />
-        <meta property="og:title" content="Muhammad Zain Ul Abideen - React Native Developer" />
+        <meta
+          property="og:title"
+          content="Muhammad Zain Ul Abideen - React Native Developer"
+        />
         <meta
           property="og:description"
           content="I build React Native applications with clean UI, smooth performance, and cross-platform consistency. Explore my work focused on mobile app development, component-driven architecture, and scalable user experiences."
@@ -59,10 +62,16 @@ export default function Home() {
                 />
 
                 <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg text-light/80 leading-relaxed max-w-md mx-auto lg:mx-0 lg:max-w-none">
-                  Junior Mobile Application Developer with proven commercial
-                  experience engineering cross-platform React Native mobile apps
-                  and scalable MERN stack web solutions. Passionate about
-                  building high-performance, responsive digital products.
+                  React Native Developer with hands-on experience building
+                  cross-platform iOS and Android applications and MERN stack
+                  applications. Skilled in UI/UX implementation, reusable
+                  components, RESTful APIs, Redux Toolkit, authentication,
+                  subscriptions, push notifications, Redis caching, background
+                  jobs, and third-party APIs. Built and published an
+                  offline-first mobile app and a full-stack personal growth
+                  platform using Node.js, Express.js, MongoDB, Stripe, Firebase,
+                  and Google Gemini API. Currently pursuing Masters in Computer
+                  Science.
                 </p>
 
                 {/* Interactive Action Buttons */}

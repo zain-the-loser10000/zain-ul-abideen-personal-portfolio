@@ -1,8 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* Define CSS Variables */
+/* ================================
+   Design Tokens / CSS Variables
+   ================================ */
 :root {
   /* Core Colors */
   --bg-main: #0b0b0f;
@@ -35,7 +35,29 @@
   --text-muted: #94a3b8;
 }
 
-/* Base styles */
+/* ================================
+   Theme integration (Tailwind v4)
+   Exposes your tokens as utilities:
+   bg-bg-main, text-primary, etc.
+   ================================ */
+@theme inline {
+  --color-bg-main: var(--bg-main);
+  --color-bg-card: var(--bg-card);
+  --color-white: var(--white);
+  --color-primary: var(--primary);
+  --color-primary-glow: var(--primary-glow);
+  --color-text-muted: var(--text-muted);
+
+  --font-sans: var(--font-family);
+  --font-display: var(--font-family-display);
+
+  --radius-sm: var(--radius-sm);
+  --shadow-md: var(--shadow-md);
+}
+
+/* ================================
+   Base styles
+   ================================ */
 html,
 body {
   padding: 0;
@@ -43,9 +65,17 @@ body {
   font-family: var(--font-family);
   background-color: var(--bg-main);
   color: var(--white);
+  min-height: 100%;
 }
 
-/* Utility classes for text */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ================================
+   Utility helpers
+   ================================ */
 .text-uppercase {
   text-transform: uppercase;
 }
@@ -75,7 +105,9 @@ body {
   color: var(--white);
 }
 
-/* Scrollbar styling */
+/* ================================
+   Scrollbar styling
+   ================================ */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;

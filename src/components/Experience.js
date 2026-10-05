@@ -197,39 +197,39 @@ const Experience = () => {
         />
 
         <ul className="w-full flex flex-col items-start justify-between ml-2 sm:ml-3 md:ml-4">
-          {/* Mobile Application Developer Internee - Spark Solutionz */}
+          {/* React Native Intern - Spark Solutionz */}
           <Details
-            position="React Native Internee"
+            position="Mobile Application Developer"
             company="Spark Solutionz"
             companyLink="https://www.linkedin.com/company/spark-solutionz/"
             time="July 2026 - Present"
             address="Sargodha, Pakistan | On-Site"
-            work="Accelerated development velocity by 20% by designing and engineering a modular repository of 15+ reusable, cross-platform UI components. Optimized mobile application performance across iOS and Android ecosystems, translating complex UI/UX wireframes into responsive production code. Collaborated with cross-functional backend teams to seamlessly integrate RESTful APIs and streamline mobile user experiences. Championed clean code practices and robust state management workflows to ensure predictable, scalable data flows."
+            work="Build responsive React Native screens from UI/UX wireframes for consistent iOS and Android experiences. Integrate RESTful APIs with backend services and handle loading, error, and empty states in mobile workflows. Manage app state with Redux, contribute to code reviews, and support sprint delivery, debugging, and bug fixes using Git."
             character={Gojo}
             characterName="Goku Black"
             color="blue"
           />
 
-          {/* Junior Mobile Application Developer - Kreative Nomads */}
+          {/* React Native Developer - Kreative Nomads */}
           <Details
-            position="Junior React Native Developer"
+            position="React Native Developer"
             company="Kreative Nomads"
             time="Sep 2024 - Feb 2025"
             address="Lahore, Pakistan | Remote"
-            work="Developed and deployed 2+ cross-platform mobile applications for iOS and Android using React Native. Implemented Redux state management and optimized app performance, reducing load times by 30%. Integrated Firebase for real-time data synchronization and implemented push notifications. Conducted code reviews and mentored junior developers on best practices for component reusability and testing methodologies."
+            work="Built 15+ reusable cross-platform UI components, reducing new-screen development time by about 20%. Converted complex UI/UX wireframes into responsive React Native interfaces for iOS and Android. Integrated RESTful APIs with backend services and improved application data-loading flows. Organized application state with Redux to keep data flow predictable across remote development sprints."
             character={Vegeta}
             characterName="Vegeta"
             color="blue"
           />
 
-          {/* Mern Stack internee - Techup-24 */}
+          {/* MERN Stack Intern - Techup-24 */}
           <Details
-            position="Mern Stack Internee"
+            position="MERN Stack Intern"
             company="Techup-24"
             companyLink="https://www.linkedin.com/company/techup-ai/"
             time="June 2024 - August 2024"
             address="Rawalpindi, Pakistan | On-Site"
-            work="Enhanced digital accessibility and cross-browser compatibility by deploying 100% responsive user interfaces using React.js for full-stack web applications. Boosted application stability and backend performance under simulated traffic by developing, testing, and maintaining secure server-side REST APIs with Node.js and Express.js. Minimized technical debt by architecting clean, reusable frontend components, facilitating easier feature scalability for the core engineering team. Maximized data integrity by managing structured schema integrations within MongoDB databases to support dynamic application features."
+            work="Built responsive, cross-browser interfaces with React.js for full-stack web applications. Developed, tested, and maintained RESTful APIs using Node.js and Express.js. Created reusable frontend components to accelerate delivery of new application features. Designed MongoDB schemas and managed application data for dynamic full-stack features."
             character={Light}
             characterName="Light Yagami"
             color="red"
